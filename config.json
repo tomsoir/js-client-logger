@@ -1,0 +1,7 @@
+{
+    "db":{
+        "cloud":"mongodb://logr:@ds139985.mlab.com:39985/logger",
+        "local":"mongodb://localhost/logger"
+    },
+    "staticDir":"static"
+}
