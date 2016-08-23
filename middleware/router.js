@@ -1,4 +1,5 @@
 var Bear = require('./../app/models/bear');
+var Logs = require('./../app/models/logs');
 
 module.exports = {
     populate:{
@@ -6,7 +7,17 @@ module.exports = {
             return addToRouter({
                 '/':{
                     'get': function(req, res) {
-                        res.json({ message: 'hooray! welcome to our api!' });   
+                        Bear.find(function(err, bears) {
+                            if (err) res.send(err);
+                            Logs.find(function(err, logs) {
+                                if (err) res.send(err);
+                                res.render('index', {
+                                    title: 'JS logger', 
+                                    names: bears,
+                                    logs: logs,
+                                });
+                            });
+                        });
                     }
                 }
             }, router);

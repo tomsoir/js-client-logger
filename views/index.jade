@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to our test
+
+    h2 Bearer
+    table
+        each name in names
+            tr
+                td #{name._id}
+                td #{name._v}
+                td #{name.name}
+
+    h2 Logger
+    table
+        each log in logs
+            tr
+                td #{log._id}
+                td #{log._v}
+                td #{log.message}

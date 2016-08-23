@@ -7,6 +7,7 @@ var morgan     = require('morgan');
 var config     = require('./config.json');
 var midStatic  = require('./middleware/static');
 var midRouter  = require('./middleware/router');
+var path        = require('path');
 var app        = express();
 
 
@@ -29,6 +30,9 @@ app.use(bodyParser.json());                         // to support JSON-encoded b
 app.use(bodyParser.urlencoded({ extended: true })); // to support URL-encoded bodies
 app.use(midStatic.parser);
 app.use(express.static(config.staticDir));
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
 
 
 // START THE SERVER
