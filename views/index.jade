@@ -18,4 +18,4 @@ block content
             tr
                 td #{log._id}
                 td #{log._v}
-                td #{log.message}
+                td #{unescape(log.message)}

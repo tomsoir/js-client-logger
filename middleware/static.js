@@ -16,7 +16,8 @@ var getName = function(req){
         var url = params[1];
         var row = params[2];
 
-        // console.log('>>>@@@', mes, url, row);
+        console.log('>>>@@@', mes, ' | ', url, ' | ', row);
+        console.log('>>>@@@', params);
 
         var logs = new Logs();
         logs.message    = mes;

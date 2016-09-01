@@ -1,20 +1,22 @@
 {
-  "name": "node-api",
-  "main": "server.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/scotch-io/node-token-authentication"
-  },
-  "scripts": {
-    "start": "node server.js"
-  },
-  "author": "Chris Sevilleja <scotch.io>",
-  "license": "MIT",
-  "dependencies": {
-    "express": "~4.0.0",
-    "morgan": "~1.0.0",
-    "mongoose": "~3.6.13",
-    "body-parser": "~1.0.1",
-    "jade": "~1.9.2"
-  }
+    "name": "node-api",
+    "main": "server.js",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/tomsoir"
+    },
+    "scripts": {
+        "start": "node server.js"
+    },
+    "author": "tomsoir <git://github.com/tomsoir>",
+        "license": "MIT",
+        "dependencies": {
+        "express": "~4.0.0",
+        "express-stormpath": "^3.1.3",
+        "jsonwebtoken": "^5.7.0",
+        "morgan": "~1.0.0",
+        "mongoose": "~3.6.13",
+        "body-parser": "~1.0.1",
+        "jade": "~1.9.2"
+    }
 }

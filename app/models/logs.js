@@ -1,5 +1,6 @@
 var mongoose    = require('mongoose');
 var Schema      = mongoose.Schema;
+
 var LogsSchema  = new Schema({
     message: String,
     location: String,
